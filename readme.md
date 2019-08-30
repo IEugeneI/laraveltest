@@ -13,4 +13,4 @@ Now you can find api methods on url:
 
 
 Then you can go to {{your_base_url}} and see 2 select ,where you can choice county and 
-city. And then push button "save" for save info to DB 
+city. And then push button save for save info to DB 
