@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-
+use App\Http\Controllers\ParsingDataController;
 class COUNTRYTableSeeder extends Seeder
 {
     /**
@@ -12,7 +12,16 @@ class COUNTRYTableSeeder extends Seeder
     public function run()
     {
         //
-        DB::table('COUNTRY')->insert([
+        $countrys=new ParsingDataController();
+
+        foreach ($countrys->setIIso3CountryArray() as $key=>$value) {
+            DB::table('COUNTRY')->insert([
+                'COUNTRY_ISO3'=>$key,
+                'COUNTRY_NAME'=>$value,
+            ]);
+        }
+
+      /*  DB::table('COUNTRY')->insert([
             'COUNTRY_ISO3'=>'UKR',
             'COUNTRY_NAME'=>'UKRAINE',
         ]);
@@ -23,6 +32,6 @@ class COUNTRYTableSeeder extends Seeder
         DB::table('COUNTRY')->insert([
             'COUNTRY_ISO3'=>'GBR',
             'COUNTRY_NAME'=>'UNITED KINGDOM',
-        ]);
+        ]);*/
     }
 }

@@ -1,8 +1,9 @@
 1) you need to install all this files to you virtual server
+<<<<<<< HEAD
 2)then configurate you .env file like .env.exmaple
 3) go migration to your DB(write in you command line located in your project folder "php artisan migrate")
 4) to added some data to DB write in command line located in you folder "php artisan db:seed"
-5)You need to install GuzzleHttp library, for this write in your project folder "composer require guzzlehttp/guzzle"
+
 
 
 Now you can find api methods on url:
@@ -14,4 +15,4 @@ Now you can find api methods on url:
 
 
 Then you can go to {{your_base_url}} and see 2 select ,where you can choice county and 
-city. And then push button save for save info to DB 
+city. And then push button "save" for save info to DB 
